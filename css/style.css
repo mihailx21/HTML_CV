@@ -6,6 +6,7 @@ body {
 }
 img {
     padding: 40px 0;
+    max-width: 450px;
 }
 .main-container {
     display: flex;
@@ -225,4 +226,45 @@ img {
     font-size: 14px;
     line-height: 24px;
     color: white;
+}
+
+@media only screen and (max-width: 450px){
+    .main-container{
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 0;
+        margin: 0; 
+    }
+    .about-me-description{
+        width: 95%;
+    }
+    /* aside styling mobile */
+    .aside-content-margin{
+        margin-left: 20px;
+    }
+    .my-name{
+        color: whitesmoke;
+    }
+    .about-me-description{
+        color: whitesmoke;
+    }
+    .img{
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+    /* main content styling */
+    .main-content{
+        width: 95%;
+        margin: 0px;
+        padding-left: 10px;
+        margin-left: 10px;
+    }
+    .about-me-new-style{
+        /* margin: top right bottom left */
+        margin: auto 20px auto 20px; 
+    }
+    
+
 }
