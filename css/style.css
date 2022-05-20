@@ -248,11 +248,12 @@ img {
     .about-me-description{
         color: whitesmoke;
     }
-    .img{
+    img{
         width: 100%;
         height: auto;
         padding: 0;
-        margin: 0;
+        margin: 10px 0;
+        box-shadow: 0px 0px 20px black;
     }
     /* main content styling */
     .main-content{
