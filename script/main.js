@@ -18,7 +18,7 @@ if(window.screen.width <= 450){
     for(let i = 0; i<threeArows.length; i++){
         threeArows[i] = document.createElement('span');
         // threeArows[i].innerHTML = '&#8744;';
-        threeArows[i].innerText = '\u2228'
+        threeArows[i].innerText = '\u225A'
         threeArows[i].style.color = "grey";
         accordeonsBlocks[i].appendChild(threeArows[i]);
         threeArows[i].style.float = "right"
@@ -33,7 +33,7 @@ if(window.screen.width <= 450){
         accordeonsBlocks[i].onclick = ()=>{
             showHiddenContent[i].classList.toggle("hide");
             if(showHiddenContent[i].classList.contains("hide"))
-                threeArows[i].innerText = '\u2228';
+                threeArows[i].innerText = '\u225A';
             else
                 threeArows[i].innerText = '\u2227'; 
         }
