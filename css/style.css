@@ -267,5 +267,11 @@ img {
         margin: auto 20px auto 20px; 
     }
     
+    .show{
+        display: block;
+    }
+    .hide{
+        display: none;
+    }
 
 }
