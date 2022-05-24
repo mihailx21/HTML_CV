@@ -1,17 +1,42 @@
-if(window.screen.width <= 450){
-    //moving my name to another place
-    let myNameInfo = document.getElementById("about-me");
-    myNameInfo.remove();
-    let newParent = document.getElementsByTagName('aside')[0];
-    newParent.insertBefore(myNameInfo, newParent.firstChild);
-    myNameInfo.classList.add("about-me-new-style");
-
-    // correcting dots in project section
-    let some = document.getElementsByClassName('dots');
-    for(let elem of some){
-        elem.innerText = "\n";
+function correctingElementsOnResizeWindow(){
+    if(window.screen.width <= 450){
+        myNameMobileVersion.style.display = "block";
+        myNameInfo.style.display = "none";
     }
+    else{
+        myNameMobileVersion.style.display = "none";
+        myNameInfo.style.display = "block";
+    }
+}
 
+function dotsNormalizeDisplay(dotsNodas,content) {
+    if(window.screen.width <= 450){
+        for(let elem of dotsNodas){
+            elem.innerText = "\n";
+        }
+    }
+    else{
+        for(let i = 0; i < dotsNodas.length; i++){
+            dotsNodas[i].innerText = content[i]
+        }
+    }
+    
+}
+let myNameInfo = document.getElementById("about-me");
+let myNameMobileVersion = document.getElementById("about-me-mobile")
+
+// correcting dots in project section
+let dotsElem = document.getElementsByClassName('dots');
+let contentDotsElement = [];
+for(let i = 0;i < dotsElem.length; i++){
+    contentDotsElement.push(dotsElem[i].innerText);
+}
+
+
+//settings on page dowload
+if(window.screen.width <= 450){
+    correctingElementsOnResizeWindow();
+    dotsNormalizeDisplay(dotsElem,contentDotsElement);
     //accordeons
     let accordeonsBlocks = document.getElementsByClassName("my-work-experience-position")
     let threeArows = [,,,];
@@ -38,5 +63,9 @@ if(window.screen.width <= 450){
                 threeArows[i].innerText = '\u2227'; 
         }
     }
+    
 }
+else
+    correctingElementsOnResizeWindow()
 
+window.onresize = correctingElementsOnResizeWindow;
