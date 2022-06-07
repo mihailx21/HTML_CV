@@ -235,6 +235,9 @@ img {
         padding: 0;
         margin: 0; 
     }
+    .about-me-mobile{
+        text-align: center; 
+    }
     .about-me-description{
         width: 95%;
     }
@@ -243,10 +246,17 @@ img {
         margin-left: 20px;
     }
     .my-name{
-        color: whitesmoke;
+        color: rgb(177, 174, 174);
+        padding: 0 10px;
+        text-align: center;
+        justify-content: center;
     }
     .about-me-description{
-        color: whitesmoke;
+        color: rgb(177, 174, 174);
+        padding: 0 10px;
+        text-align: start;
+        justify-content: center;
+        
     }
     img{
         width: 100%;
